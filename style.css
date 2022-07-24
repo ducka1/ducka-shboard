@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: Roboto, sans-serif;
 }
 
 div {
@@ -16,30 +19,100 @@ div > .left-sidebar {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 4.5fr;
-    grid-template-rows: 1.25fr 5fr;
+    grid-template-rows: 1fr auto;
 }
 
 .left-sidebar {
-    height: 100vh;
     grid-row: span 2;
+}
+
+.logo, .item {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.item img {
+    margin-left: 6px;
+}
+
+.sep {
+    height: 40px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.header {
+    padding: 10px 40px;
+    box-shadow: 5px 5px 10px rgb(173, 173, 173);
+    z-index: 1;
+    position: relative;
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.top-header input {
+    width: 800px;
+    height: 30px;
+    border: none;
+    background-color: rgb(223, 227, 235);
+    border-radius: 50px;
 }
 
 .content {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgb(223, 227, 235);
+    padding: 40px 20px;
 }
 
 .bottom-header {
     display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
 }
 
 .actions {
     margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.actions button {
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(0, 127, 255);
+    color: white;
+    padding: 10px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.projects h2, .right-sidebar h2, .projects h3, .right-sidebar h4 {
+    margin-bottom: 10px;
+}
+
+.projects {
+    padding-right: 20px;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
 }
 
 .card {
@@ -47,16 +120,52 @@ div > .left-sidebar {
     grid-template-columns: 10px 1fr;
     grid-template-rows: 3fr 1fr;
     width: 400px;
-    height: 200px;
+    height: 250px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgb(173, 173, 173);
+    border-radius: 10px;
+}
+
+.text {
+    padding: 40px 10px 0px 20px;
 }
 
 .tint {
     background-color: rgb(255, 187, 0);
+    border-radius: 50px;
     grid-row: span 2;
 }
 
 .card-actions {
     justify-self: flex-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 20px;
+    gap: 25px;
+}
+
+.announcements, .trending {
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 5px 5px 10px rgb(173, 173, 173);
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.announce {
+    padding: 30px;
+}
+
+.sep2 {
+    background-color: rgb(192, 192, 192);
+    height: 2px;
+    margin: 0px 30px;
 }
 
 .small {
